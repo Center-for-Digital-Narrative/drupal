@@ -14,8 +14,7 @@
  */
 define('MEDIA_FLICKR_NAMESPACE', 'media_flickr__');
 define('MEDIA_FLICKR_RESTPOINT', 'https://api.flickr.com/services/rest/');
-define('MEDIA_FLICKR_API_APPLICATION_URL', 'http://www.flickr.com/services/api/keys');
-define('MEDIA_FLICKR_MAIN_URL', 'http://www.flickr.com/');
+define('MEDIA_FLICKR_API_APPLICATION_URL', 'https://www.flickr.com/services/api/keys');
 
 /**
  * Wrapper for variable_get() using the Media: Flickr variable registry.
