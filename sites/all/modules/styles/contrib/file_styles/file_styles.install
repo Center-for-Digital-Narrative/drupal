@@ -153,3 +153,10 @@ function file_styles_update_7209() {
 function file_styles_update_7210() {
   return array();
 }
+
+/**
+ * Create custom file entity view modes for styles.
+ */
+function file_styles_update_7211() {
+  return array();
+}

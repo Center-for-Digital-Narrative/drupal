@@ -230,6 +230,15 @@ class FileStyles extends StylesDefault {
   }
 
   /**
+   * Override the getObject() method to account for media fields that store
+   * their data in a sub-property rather than the field itself.
+   */
+  function getObject() {
+    $object = $this->get('object');
+    return !empty($object->file) ? $object->file : $object;
+  }
+
+  /**
    * Override the render function to always display a thumbnail in the wysiwyg.
    */
   public function render($reset = FALSE) {
