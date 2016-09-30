@@ -3,8 +3,8 @@
  * ARC2 RDF Store DELETE Query Handler
  *
  * @author Benjamin Nowack <bnowack@semsol.com>
- * @license http://arc.semsol.org/license
- * @homepage <http://arc.semsol.org/>
+ * @license W3C Software License and GPL
+ * @homepage <https://github.com/semsol/arc2>
  * @package ARC2
 */
 
@@ -227,6 +227,8 @@ class ARC2_StoreDeleteQueryHandler extends ARC2_StoreQueryHandler {
       WHERE G.g IS NULL AND T1.t IS NULL AND T2.t IS NULL
     ';
     //mysql_query($sql, $con);
+    /* release lock */
+    $this->store->releaseLock();
   }
   
   /*  */
