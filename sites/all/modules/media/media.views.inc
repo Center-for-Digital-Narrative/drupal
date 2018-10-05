@@ -127,13 +127,11 @@ function template_preprocess_media_views_view_media_browser(&$vars) {
   $vars['wrapper_suffix'] = '</div>';
   $vars['list_type_prefix'] = '<' . $handler->options['type'] . ' id="media-browser-library-list" class="' . implode(' ', $class) . '">';
   $vars['list_type_suffix'] = '</' . $handler->options['type'] . '>';
-  $vars['aria_role'] = $params['multiselect'] ? 'checkbox' : 'radio';
+  $vars['aria_role'] = (isset($params['multiselect']) && $params['multiselect']) ? 'checkbox' : 'radio';
 
   // Run theming variables through a standard Views preprocess function.
   template_preprocess_views_view_unformatted($vars);
 
-  // Add media browser JavaScript and CSS.
-  drupal_add_js(drupal_get_path('module', 'media') . '/js/plugins/media.views.js');
 }
 
 /**
